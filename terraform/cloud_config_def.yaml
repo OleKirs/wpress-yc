@@ -1,0 +1,13 @@
+#cloud-config
+datasource:
+  Ec2:
+    strict_id: false
+ssh_pwauth: no
+users:
+  - name: sysadmin
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    groups: wheel
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJURRK0wX0+V9Ads7zqXePHHEFyhX7/HHbf4pQg6e10o
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxy0GrqiEfixk6Kdtvo49q4M6/uPY/oMtQhTIQCQrU+K0LGLxiAku5ae9ehEUy8ZXuvaLbKl0va/1qKtknuzJQB6Cobo4hWiML8NX9UvCjBf8hePT8dr+dtiLJ35iAQ8uF1JaDgF/B3X2sYLaaqCtqAw8HRx4O0P/Fa/YWKOeRBsKbqxcx/B3flapsnuV1gJlBJQnVvarygj2WY9Y/l4P7a3WsGHC8Mpd7YgR02eH0pXHPFjLWRcht7dq5tQoztc4yWupbkAT6ya2Vh97ibZAEc2azfg8WVvmZzBvZe60A7/omwNrnB+rjoMjlMb8+IlmQVhZ4FR0y+pHMnISPqsdB
